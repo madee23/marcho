@@ -5,6 +5,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
+const ttf2woff = require('gulp-ttf2woff');
+const ttf2woff2 = require('gulp-ttf2woff2');
 const del = require('del');
 
 // Функции
@@ -22,7 +24,7 @@ function browsersync() {
 // Тасчим ЭСЦСС
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(scss({ outputStyle: 'compressed' }))
+    .pipe(scss({ outputStyle: 'expanded' }))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
@@ -61,6 +63,16 @@ function images() {
     .pipe(dest('dist/images'))
 }
 
+// Тасчим шрифты
+function fontConverter() {
+  src('app/fonts/**/*.ttf')
+    .pipe(ttf2woff())
+    .pipe(dest('app/fonts/'))
+  return src('app/fonts/**/*.ttf')
+    .pipe(ttf2woff2())
+    .pipe(dest('app/fonts/'))
+}
+
 // Билдим проект
 function build() {
   return src([
@@ -74,6 +86,11 @@ function build() {
 // Чистим Дист
 function clean() {
   return del('dist')
+}
+
+// Del fonts
+function cleanFonts() {
+  return del('app/fonts/*.ttf')
 }
 
 // следим за файлами
@@ -91,6 +108,8 @@ exports.browsersync = browsersync;
 exports.watching = watching;
 exports.scripts = scripts;
 exports.images = images;
+exports.fonts = series(fontConverter, cleanFonts);
+exports.cleanFonts = cleanFonts; //чистим дист от фонтов
 exports.clean = clean; //чистим дист
 exports.build = series(clean, images, build);
 
