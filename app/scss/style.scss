@@ -1,6 +1,12 @@
-@import 'vars';
+// Заготовки
 @import 'fonts';
+@import 'vars';
 @import 'reset';
 @import 'global';
 
+// Секции, пахнали
+@import 'header';
+@import 'footer';
+
+// Медиа-кверисы
 @import 'media';

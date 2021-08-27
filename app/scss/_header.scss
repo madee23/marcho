@@ -1,0 +1,74 @@
+// @extend %quicksand-400;
+// @extend %quicksand-500;
+// @extend %roboto-400;
+// @extend %roboto-700;
+// @extend %segoe-700;
+
+.header {
+ background-color: #fff;
+ &__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 110px;
+  padding: 40px 0;
+ }
+}
+
+.logo {
+ &__img {
+  width: 183px;
+  height: 30px;
+ }
+}
+
+.menu {
+ flex-grow: 1;
+ margin: 0 218px 0 201px;
+ &__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+ }
+ &__list-item {
+ }
+ &__list-link {
+  color: $title-color;
+  @extend %roboto-400;
+  padding: 0 2px 8px;
+  transition: all 0.3s;
+ }
+ &__list-link--active,
+ &__list-link:hover {
+  color: $accent-color;
+  border-bottom: 1px solid $accent-color;
+  font-weight: bold;
+ }
+}
+
+.user-nav {
+ width: 170px;
+ height: 28px;
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-end;
+ &__link {
+  position: relative;
+ }
+ &__number {
+  @extend %quicksand-500;
+  position: absolute;
+  font-size: 12px;
+  line-height: 20px;
+  width: 20px;
+  height: 20px;
+  background-color: $accent-color;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  right: -14px;
+  top: -8px;
+ }
+}
