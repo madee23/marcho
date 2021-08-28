@@ -1,0 +1,41 @@
+.top-slider__inner > ul.slick-dots {
+	position: absolute;
+	left: 50%;
+	transform: translate(-76px);
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0;
+	gap: 10px;
+	margin-bottom: 40px;
+	li {
+		transition: all 0.3s ease-in-out;
+		button {
+			background-color: rgba($color: #000000, $alpha: 0);
+			border-radius: 50%;
+			border: none;
+			width: 30px;
+			height: 30px;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 5px;
+				height: 5px;
+				background-color: $default-color;
+				border-radius: 50%;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+		&.slick-active {
+			border: 1px solid $accent-color;
+			border-radius: 50%;
+			button::before {
+				background-color: $accent-color;
+			}
+		}
+	}
+}
