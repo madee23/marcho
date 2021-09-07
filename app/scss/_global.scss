@@ -1,30 +1,43 @@
 html,
 body {
- height: 100%;
+	height: 100%;
 }
 main {
- flex-grow: 1;
+	flex-grow: 1;
 }
 body {
- color: $default-color;
- font-size: 16px;
- line-height: 26px;
- background-color: rgb(189, 189, 189);
- @extend %quicksand-500;
- display: flex;
- flex-direction: column;
+	color: $default-color;
+	font-size: 16px;
+	line-height: 26px;
+	@extend %quicksand-500;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
- width: 1170px;
- margin: 0 auto;
- padding: 0 15px;
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
 a {
- color: $default-color;
- font-size: 16px;
- line-height: 26px;
- // background-color: rgb(189, 189, 189);
- @extend %quicksand-500;
+	color: $default-color;
+	font-size: 16px;
+	line-height: 26px;
+	// background-color: rgb(189, 189, 189);
+	@extend %quicksand-500;
+}
+
+.title {
+	font-size: 48px;
+	color: $title-color;
+	text-align: center;
+	@extend %roboto-700;
+	margin-bottom: 30px;
+}
+
+.text {
+	text-align: center;
+	max-width: 570px;
+	margin: 0 auto 60px;
 }
