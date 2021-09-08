@@ -46,3 +46,11 @@ $bg-color: #f6f6f6; //фоновый цвет
 	font-family: 'segoescb', sans-serif;
 	font-weight: 700;
 }
+
+// FancyBox Error Fix
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}
