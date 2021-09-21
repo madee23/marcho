@@ -122,8 +122,6 @@
 		box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
 		background-color: #fff;
 	}
-	&__item-text {
-	}
 	&__item-title {
 		font-size: 22px;
 		color: #29282d;
@@ -131,8 +129,4 @@
 		margin-bottom: 20px;
 		@extend %roboto-400;
 	}
-}
-.text {
-}
-.title {
 }
