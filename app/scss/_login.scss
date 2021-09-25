@@ -46,8 +46,12 @@
 		color: #fff;
 		margin-bottom: 20px;
 		line-height: 1;
+		cursor: pointer;
 	}
 	&__password-link {
 		color: $accent-color;
+	}
+	&__text {
+		margin-bottom: 25px;
 	}
 }
