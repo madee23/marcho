@@ -22,6 +22,7 @@
 .product-item {
 	max-width: 370px;
 	text-align: center;
+	transition: all 0.3s ease-in-out;
 	&:hover {
 		.product-item__link-box {
 			bottom: 50px;
@@ -32,9 +33,12 @@
 	}
 	&__img-box {
 		position: relative;
-		height: 370px;
+		height: 355px;
 		overflow: hidden;
 		margin-bottom: 30px;
+	}
+	&__content-box {
+		display: none;
 	}
 	&__link {
 		line-height: 0;

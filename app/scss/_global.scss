@@ -47,3 +47,56 @@ a {
 	max-width: 570px;
 	margin: 0 auto 60px;
 }
+
+// Пагинация
+.pagination {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 47px;
+	width: 374px;
+	margin: 0 auto;
+	&__arrows {
+	}
+	&__item {
+	}
+	&__link {
+		&--active {
+			color: $accent-color;
+		}
+	}
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		width: 135px;
+	}
+	&__next {
+		position: relative;
+		line-height: 0.7;
+		padding-right: 15px;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 5px;
+			height: 10px;
+			background-image: url('../images/shop/angle_right.svg');
+		}
+	}
+	&__prev {
+		position: relative;
+		line-height: 0.7;
+		padding-left: 15px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 5px;
+			height: 10px;
+			background-image: url('../images/shop/angle_left.svg');
+		}
+	}
+}

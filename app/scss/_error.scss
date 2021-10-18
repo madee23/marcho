@@ -15,6 +15,7 @@
 	}
 	&__text {
 		margin-bottom: 60px;
+		max-width: 470px;
 	}
 	&__title {
 		margin-top: 150px;
@@ -32,6 +33,6 @@
 	}
 }
 
-.error__header-bg {
+.header--404-page {
 	background-color: #f6f6f6;
 }

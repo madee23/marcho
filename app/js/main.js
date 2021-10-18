@@ -1,4 +1,38 @@
 $(function () {
+	// мой код
+	$('.shop-content__filter-btn').on('click', function () {
+		$('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
+		$(this).addClass('shop-content__filter-btn--active');
+	});
+
+	$('.button-list').on('click', function () {
+		$('.product-item').addClass('product-item--list');
+	});
+
+	$('.button-grid').on('click', function () {
+		$('.product-item').removeClass('product-item--list');
+	});
+
+
+	// Рэнж-слайдер
+	$(".filter-price__input").ionRangeSlider({
+		hide_min_max: "true",
+		hide_from_to: 'true',
+		onStart: function (data) {
+			$('.filter-price__from').text(data.from);
+			$('.filter-price__to').text(data.to);
+		},
+		onChange: function (data) {
+			$('.filter-price__from').text(data.from);
+			$('.filter-price__to').text(data.to);
+		}
+	});
+	// Рэнж-слайдер всё
+
+	// ЖиКвери Форм Стайлер
+	$('.select-style').styler();
+	// ЖиКвери Форм Стайлер всё
+
 	// Слайдер
 	$('.top-slider__inner').slick({
 		dots: true,
@@ -7,6 +41,7 @@ $(function () {
 		autoplay: true,
 		autoplaySpeed: 2000
 	})
+	// Слайдер всё
 
 	// Рейтинг
 	$(".star").rateYo({
@@ -15,6 +50,7 @@ $(function () {
 		ratedFill: "#ffc35b",
 		readOnly: true
 	});
+	// Рейтинг всё
 
 	// Часы, таймер
 	function getTimeRemaining(endtime) {
@@ -59,4 +95,6 @@ $(function () {
 
 	const deadline = $('.promo__clock').attr('data-time');
 	initializeClock('promo__clock', deadline);
+	// Часы, таймер всё
+
 });
