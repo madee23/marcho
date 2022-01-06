@@ -57,6 +57,7 @@
 	}
 	&__form-btn {
 		@extend %btn-red;
+		height: 50px;
 	}
 	&__form-input {
 		max-width: 320px;

@@ -1,0 +1,52 @@
+.container {
+}
+
+.related {
+	padding-bottom: 120px;
+	.title {
+		margin-bottom: 60px;
+		line-height: 0.8;
+	}
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 30px;
+		.product-item {
+			&__box {
+			}
+			&__btn {
+			}
+			&__content-box {
+			}
+			&__image {
+			}
+			&__img-box {
+				width: 270px;
+				height: 270px;
+				margin-bottom: 20px;
+			}
+			&__link {
+			}
+			&__link-box {
+			}
+			&__new-price {
+			}
+			&__old-price {
+			}
+			&__price {
+			}
+			&__text {
+			}
+			&__title {
+				font-size: 18px;
+				margin-bottom: 10px;
+			}
+			&__wrapper-box {
+			}
+		}
+		.star {
+			margin-bottom: 15px;
+		}
+	}
+}

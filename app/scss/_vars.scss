@@ -7,21 +7,30 @@ $bg-color: #f6f6f6; //фоновый цвет
 // Кнопки, миксины
 %btn-red {
 	display: inline-block;
-	padding: 12px 29px 12px 28px;
+	padding: 12px 34px 12px 34px;
 	text-transform: uppercase;
 	color: #fff;
 	background-color: $accent-color;
 	box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 	border: none;
 	@extend %roboto-400;
+	line-height: 0.8;
+	height: 50px;
 }
 
-%checkbox-hidden {
+%checkbox-hidden,
+%radio-hidden {
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
 	clip: rect(0 0 0 0);
 	position: absolute;
+}
+
+%abs-center {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 // Шрифты

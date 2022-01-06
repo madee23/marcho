@@ -1,5 +1,6 @@
 $(function () {
 	// мой код
+	// Перключаем грид на лист
 	$('.shop-content__filter-btn').on('click', function () {
 		$('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
 		$(this).addClass('shop-content__filter-btn--active');
@@ -12,7 +13,15 @@ $(function () {
 	$('.button-grid').on('click', function () {
 		$('.product-item').removeClass('product-item--list');
 	});
-
+	// табы в продукте
+	$('.product-single-tabs__top-item').on('click', function (e) {
+		e.preventDefault();
+		$('.product-single-tabs__top-item').removeClass('product-single-tabs__top-item--active');
+		$(this).addClass('product-single-tabs__top-item--active');
+		$('.product-single-tabs__content-item').removeClass('product-single-tabs__content-item--active');
+		$($(this).attr('href')).addClass('product-single-tabs__content-item--active');
+	});
+	// мой код всё
 
 	// Рэнж-слайдер
 	$(".filter-price__input").ionRangeSlider({
@@ -30,10 +39,10 @@ $(function () {
 	// Рэнж-слайдер всё
 
 	// ЖиКвери Форм Стайлер
-	$('.select-style').styler();
+	$('.select-style, .product-single-item__num').styler();
 	// ЖиКвери Форм Стайлер всё
 
-	// Слайдер
+	// Слайдеры, слик
 	$('.top-slider__inner').slick({
 		dots: true,
 		arrows: false,
@@ -41,11 +50,41 @@ $(function () {
 		autoplay: true,
 		autoplaySpeed: 2000
 	})
+	$('.product-single-slide__small').slick({
+		asNavFor: '.product-single-slide__big',
+		focusOnSelect: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		vertical: true,
+		draggable: false
+	});
+	$('.product-single-slide__big').slick({
+		asNavFor: '.product-single-slide__small',
+		slidesToShow: 1,
+		draggable: false,
+		arrows: false,
+		fade: true
+	});
 	// Слайдер всё
 
 	// Рейтинг
 	$(".star").rateYo({
 		starWidth: "17px",
+		normalFill: '#ccccce',
+		ratedFill: "#ffc35b",
+		readOnly: true
+	});
+
+	$(".product-single-item__rate-star").rateYo({
+		starWidth: "16px",
+		normalFill: '#ccccce',
+		ratedFill: "#ffc35b",
+		readOnly: true
+	});
+
+	$(".reviews__star").rateYo({
+		starWidth: "18px",
+		spacing: "2px",
 		normalFill: '#ccccce',
 		ratedFill: "#ffc35b",
 		readOnly: true
