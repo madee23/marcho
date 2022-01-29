@@ -12,13 +12,14 @@ const del = require('del');
 // Функции
 
 // Релодим, бравзерсинк
-function browsersync() {
+function browsersync(cb) {
 	browserSync.init({
 		server: {
 			baseDir: 'app'
 		},
-		notify: false
+		notify: true,
 	})
+	cb();
 }
 
 // Тасчим ЭСЦСС
@@ -99,10 +100,11 @@ function cleanFonts() {
 }
 
 // следим за файлами
-function watching() {
-	watch(['app/scss/**/*.scss'], styles); //за цсс смотрим, выполняем styles
+function watching(cb) {
+	watch(['app/scss/**/*.scss'], styles); //за эсцсс смотрим, выполняем styles
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts); //за джиэс смотрим, выполняем scripts
 	watch(['app/**/*.html']).on('change', browserSync.reload);
+	cb();
 }
 
 

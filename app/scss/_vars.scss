@@ -33,6 +33,13 @@ $bg-color: #f6f6f6; //фоновый цвет
 	transform: translate(-50%, -50%);
 }
 
+// //Оступ символа слева
+%first-margin-left {
+	&::first-letter {
+		margin-left: 10px;
+	}
+}
+
 // Шрифты
 %quicksand-400 {
 	font-family: 'Quicksand-Regular', sans-serif;
