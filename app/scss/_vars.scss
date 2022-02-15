@@ -28,6 +28,7 @@ $bg-color: #f6f6f6; //фоновый цвет
 }
 
 %abs-center {
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);

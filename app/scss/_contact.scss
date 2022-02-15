@@ -1,0 +1,35 @@
+.contact {
+	display: flex;
+	padding-bottom: 135px;
+	&__form {
+	}
+	&__info {
+		width: 370px;
+	}
+	&__info-link {
+		display: flex;
+		margin-bottom: 30px;
+	}
+	&__info-link-box {
+		display: flex;
+		flex-direction: column;
+	}
+	&__link-box-item {
+	}
+	&__info-link-img {
+		width: 60px;
+		height: 60px;
+		background-color: #fff;
+		box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+		position: relative;
+		img {
+			@extend %abs-center;
+		}
+	}
+	&__info-link-item {
+	}
+	&__info-text {
+	}
+	&__info-title {
+	}
+}
