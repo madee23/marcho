@@ -9,6 +9,7 @@
   "author": "madee23",
   "license": "ISC",
   "devDependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.27.5",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -20,7 +21,11 @@
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify": "^3.0.2",
     "imagemin": "^8.0.1",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.0",
-    "sass": "^1.37.5"
+    "jquery-form-styler": "^2.0.2",
+    "rateyo": "^2.3.2",
+    "sass": "^1.37.5",
+    "slick-carousel": "^1.8.1"
   }
 }

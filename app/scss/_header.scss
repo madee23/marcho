@@ -2,7 +2,6 @@
 // @extend %quicksand-500;
 // @extend %roboto-400;
 // @extend %roboto-700;
-// @extend %segoe-700;
 
 .header {
  background-color: #fff;
@@ -32,8 +31,6 @@
   align-items: center;
   text-transform: uppercase;
  }
- &__list-item {
- }
  &__list-link {
   color: $title-color;
   @extend %roboto-400;
@@ -44,7 +41,7 @@
  &__list-link:hover {
   color: $accent-color;
   border-bottom: 1px solid $accent-color;
-  font-weight: bold;
+  @extend %roboto-700;
  }
 }
 
