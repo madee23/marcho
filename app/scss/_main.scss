@@ -1,0 +1,42 @@
+.top-slider {
+	padding-top: 70px;
+	background-color: $bg-color;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center center;
+	background-image: url('../images/slider/main_bg.png');
+	max-height: 700px;
+	height: 100%;
+	&__container {
+		width: 1530px;
+	}
+	&__content {
+		padding-left: 180px;
+	}
+	&__inner {
+		position: relative;
+	}
+	&__item {
+		display: flex !important;
+		justify-content: space-between;
+	}
+	&__link {
+		@extend %btn-red;
+	}
+	&__text {
+		max-width: 470px;
+		margin-bottom: 60px;
+	}
+	&__title {
+		max-width: 670px;
+		width: 100%;
+		font-size: 58px;
+		line-height: 68px;
+		@extend %roboto-700;
+		color: $title-color;
+		margin-top: 129px;
+		margin-bottom: 40px;
+	}
+}
+
+@import 'slick-dots';

@@ -1,0 +1,97 @@
+.blog {
+	padding-bottom: 164px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-image: url('../images/blog/bg_dec.png');
+	&__item {
+		width: 370px;
+		min-height: 478px;
+		overflow: hidden;
+		background-color: #fff;
+		border: 1px solid #ececec;
+		transition: all 0.3s ease-in-out;
+		padding-bottom: 30px;
+		&:hover {
+			box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+			z-index: 3;
+			border: none;
+			.blog__item-link {
+				color: $accent-color;
+			}
+			.blog__item-link > svg > path {
+				fill: $accent-color;
+				transition: all 0.3s ease-in-out;
+			}
+		}
+	}
+	&__item-author {
+		line-height: 20px;
+		padding-left: 30px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: url(../images/blog/user.svg);
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&__item-date {
+		line-height: 20px;
+		padding-left: 30px;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-image: url(../images/blog/clock.svg);
+			width: 20px;
+			height: 20px;
+		}
+	}
+	&__item-imglink {
+		margin-bottom: 30px;
+		display: inline-block;
+	}
+	&__item-info {
+		display: flex;
+		margin-left: 40px;
+		margin-bottom: 26px;
+		gap: 33px;
+	}
+	&__item-link {
+		margin-left: 40px;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		transition: all 0.3s ease-in-out;
+	}
+	&__item-title {
+		margin-left: 40px;
+		margin-right: 40px;
+		font-size: 22px;
+		line-height: 32px;
+		color: $title-color;
+		margin-bottom: 18px;
+	}
+	&__item-title-link {
+	}
+	&__items {
+		display: flex;
+		gap: 30px;
+		position: relative;
+		&::after {
+			content: '';
+			background-image: url(../images/blog/bg_dec-2.svg);
+			width: 126px;
+			height: 53px;
+			position: absolute;
+			right: -25px;
+			top: -25px;
+			z-index: -1;
+		}
+	}
+}
