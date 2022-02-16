@@ -5,7 +5,10 @@
 *.sublime*
 npm-debug.*
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28adb7a1da5c16050984d6705f2aaff2f34225ad
 node_modules/
 package-lock.json
 app/css/*
